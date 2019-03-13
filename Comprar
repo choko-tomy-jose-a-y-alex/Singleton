@@ -1,0 +1,30 @@
+class Agencia {
+ public static final Agencia COMPRAR = new Agencia();
+ private int SIN$;
+ private Agencia() {}
+ public void cuenta() {
+   SIN$++;
+ }
+ public int getA() {
+   return SIN$;
+ }
+}
+class UsaAgencia {
+ static void carro() {
+    System.out.println("Tienes dinero para un carro");
+   System.out.println("no");
+   Agencia.COMPRAR.cuenta();
+ }
+}
+public class ComAgencia {
+ public static void main(String[] args) {
+   Agencia.COMPRAR.cuenta();
+   UsaAgencia.carro();
+   UsaAgencia.carro();
+   UsaAgencia.carro();
+   UsaAgencia.carro();
+   Agencia.COMPRAR.cuenta();
+   System.out.println("Del 1 al 10 cuanto dinero tienes: "+Agencia.COMPRAR.getA());
+ }
+
+}
