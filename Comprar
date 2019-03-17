@@ -1,4 +1,13 @@
+
 class Agencia {
+ private static Agencia comp;
+public static synchronized Agencia getComp(){
+	if (comp==null){
+          comp = new Agencia();
+	}
+   return comp;
+}
+
  public static final Agencia COMPRAR = new Agencia();
  private int SIN$;
  private Agencia() {}
